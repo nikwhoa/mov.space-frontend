@@ -1,0 +1,100 @@
+.sticky-wrapper {
+  // position: absolute;
+  z-index: 100;
+  height: 110px;
+  width: 100%;
+
+  .site-navbar {
+    transition: 0.3s all ease;
+    margin-bottom: 0px;
+    z-index: 1999;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 1.5rem;
+
+    .site-menu {
+      margin-bottom: 0;
+
+      li {
+        display: inline-block;
+      }
+
+      a {
+        padding: 5px 20px;
+        font-weight: 700;
+        display: inline-block;
+        letter-spacing: 0.01rem;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      a.active:after {
+        height: 2px;
+        background: #fff;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        right: 20px;
+      }
+
+      .active {
+        color: #fff;
+        position: relative;
+        display: inline-block;
+        padding: 5px 20px;
+      }
+    }
+  }
+
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.site-logo {
+  position: relative;
+  font-weight: 900;
+  font-size: 1.6rem;
+
+  a {
+    color: #fff;
+  }
+}
+
+.cta a span {
+  border-color: #48d494;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #48d494;
+  font-weight: 700;
+}
+
+button.nav-link {
+  background: transparent;
+  border: 1px solid #48d494;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 10px 20px !important;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #48d494;
+  font-weight: 700;
+  display: inline-block;
+
+  &:hover {
+    color: #fff;
+    background-color: #48d494;
+    border-color: #48d494;
+  }
+
+  span {
+    border: none;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}

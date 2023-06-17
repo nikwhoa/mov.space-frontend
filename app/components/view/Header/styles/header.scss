@@ -1,0 +1,37 @@
+.header {
+  @media (min-width: 1024px) {
+    width: 98%;
+  }
+}
+
+.language-selector-wrapper {
+  position: absolute;
+  @apply flex items-center pl-2;
+  @media (min-width: 1024px) {
+    right: -30px;
+  }
+  @media (min-width: 1280px) {
+    right: -5px;
+  }
+}
+
+.nav-item {
+  @apply inline-block text-center;
+  width: 125px;
+
+  a {
+    @apply transform transition-all duration-200 ease-linear;
+    &:hover {
+      @apply font-semibold scale-110;
+    }
+  }
+}
+
+.header-buttons {
+  a {
+    @apply transform transition-transform duration-200 ease-linear;
+    &:hover {
+      @apply scale-110;
+    }
+  }
+}

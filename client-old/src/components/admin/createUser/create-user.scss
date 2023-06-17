@@ -1,0 +1,91 @@
+.create-user-form {
+  background-color: #15172b;
+  margin: 2rem auto;
+  border-radius: 20px;
+  box-sizing: border-box;
+  // height: 500px;
+  padding: 25px 10px;
+  max-width: 620px;
+  width: 100%;
+}
+.create-user-btn {
+  padding: 0.6rem 1rem;
+}
+
+.login-text {
+  display: block !important;
+  text-align: left !important;
+  width: 75% !important;
+  margin: 0.5rem auto !important;
+  font-size: 0.8rem !important;
+}
+.create-user-input {
+  margin: 2rem 0 !important;
+  height: initial !important;
+  padding: 0 1.5rem;
+  margin: 0.5 0;
+}
+
+.create-password {
+  display: block;
+  position: absolute;
+  right: 40px;
+  width: 120px;
+  bottom: 0px;
+  height: 40px;
+  font-size: 0.8rem !important;
+  padding: 0.2rem 0.4rem !important;
+}
+
+// .pass-input {
+//     display: inline-block;
+// }
+
+.create-user-text-field {
+  width: 100%;
+  border-radius: 12px !important;
+
+  div {
+    background: #303245 !important;
+    color: #ffffff !important;
+    border-radius: 12px !important;
+    border-color: transparent !important;
+  }
+
+  label {
+    color: rgb(74, 172, 127) !important;
+    font-weight: bold !important;
+  }
+
+  p {
+    color: #fff !important;
+  }
+}
+
+.preview-image {
+  width: 60%;
+  max-width: 100%;
+}
+
+.create-user-phone-container {
+  height: 58px !important;
+}
+
+.create-user-phone-field {
+  height: 56px !important;
+  width: 100% !important;
+  background: #303245 !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  border-color: transparent !important;
+}
+
+.react-tel-input .special-label {
+  display: block;
+  color: rgb(74, 172, 127) !important;
+  font-weight: bold !important;
+  font-size: .9rem !important;
+  left: 10px !important;
+  top: -12px !important;
+  background: transparent !important;
+}

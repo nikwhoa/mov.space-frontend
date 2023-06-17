@@ -1,0 +1,78 @@
+.edit-site-settings {
+  .preview-image {
+    width: 60%;
+    max-width: 100%;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  form {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .input-container {
+    height: initial;
+    padding: 0 1.5rem;
+  }
+  label {
+    text-align: left;
+    display: block;
+    width: 79%;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  &__navigation {
+    // display: flex;
+    // flex-direction: row;
+    margin: 1rem 0;
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      li {
+        padding: 0 0.5rem;
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 0.9rem;
+          font-weight: 600;
+          &:hover {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.ql-snow {
+  // p {
+  color: #fff;
+  // }
+}
+.editorClassName,
+.wrapperClassName {
+  background-color: #fff;
+}
+
+.color-picker-box {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+}
+
+.color-picker-cover {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.color-picker-popover {
+  position: absolute;
+  z-index: 2;
+}

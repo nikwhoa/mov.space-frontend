@@ -1,0 +1,37 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "indent": "off",
+    "react/jsx-indent": "off",
+    "react/function-component-definition": "off",
+    "no-trailing-spaces": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "react/jsx-indent-props": "off",
+    "arrow-body-style": "off",
+    "no-console": "off",
+    "max-len": "off",
+    "no-unused-vars": "off",
+    "implicit-arrow-linebreak": "off",
+    "jsx-one-expression-per-line": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "spaced-comment": "off",
+    "no-underscore-dangle": "off",
+    "comma-dangle": "off",
+    "react/jsx-curly-newline": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "consistent-return": "off",
+    "linebreak-style": "off",
+    "object-curly-newline": "off",
+    "no-plusplus": "off"
+  }
+}

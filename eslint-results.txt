@@ -1,0 +1,28 @@
+[0m[0m
+[0m[4m/Users/n.norenko/development/pp/move-space/client/app/components/view/Header/Header.js[24m[0m
+[0m  [2m69:13[22m  [33mwarning[39m  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md         [2mjsx-a11y/anchor-is-valid[22m[0m
+[0m  [2m74:13[22m  [33mwarning[39m  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md         [2mjsx-a11y/anchor-is-valid[22m[0m
+[0m  [2m80:11[22m  [33mwarning[39m  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  [2mjsx-a11y/anchor-is-valid[22m[0m
+[0m  [2m87:11[22m  [33mwarning[39m  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  [2mjsx-a11y/anchor-is-valid[22m[0m
+[0m[0m
+[0m[4m/Users/n.norenko/development/pp/move-space/client/app/page.js[24m[0m
+[0m  [2m1:57[22m  [31merror[39m  Extra semicolon                          [2msemi[22m[0m
+[0m  [2m3:32[22m  [31merror[39m  Block must not be padded by blank lines  [2mpadded-blocks[22m[0m
+[0m[0m
+[0m[4m/Users/n.norenko/development/pp/move-space/client/postcss.config.js[24m[0m
+[0m  [2m4:21[22m  [31merror[39m  Unexpected trailing comma  [2mcomma-dangle[22m[0m
+[0m  [2m5:4[22m   [31merror[39m  Unexpected trailing comma  [2mcomma-dangle[22m[0m
+[0m[0m
+[0m[4m/Users/n.norenko/development/pp/move-space/client/tailwind.config.js[24m[0m
+[0m   [2m6:37[22m  [31merror[39m  Unexpected trailing comma  [2mcomma-dangle[22m[0m
+[0m  [2m11:74[22m  [31merror[39m  Unexpected trailing comma  [2mcomma-dangle[22m[0m
+[0m  [2m14:31[22m  [31merror[39m  Unexpected trailing comma  [2mcomma-dangle[22m[0m
+[0m  [2m19:77[22m  [31merror[39m  Unexpected trailing comma  [2mcomma-dangle[22m[0m
+[0m  [2m20:8[22m   [31merror[39m  Unexpected trailing comma  [2mcomma-dangle[22m[0m
+[0m  [2m21:6[22m   [31merror[39m  Unexpected trailing comma  [2mcomma-dangle[22m[0m
+[0m  [2m23:14[22m  [31merror[39m  Unexpected trailing comma  [2mcomma-dangle[22m[0m
+[0m  [2m24:2[22m   [31merror[39m  Extra semicolon            [2msemi[22m[0m
+[0m[0m
+[0m[31m[1m✖ 16 problems (12 errors, 4 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[31m[1m  12 errors and 0 warnings potentially fixable with the `--fix` option.[22m[39m[0m
+[0m[31m[1m[22m[39m[0m

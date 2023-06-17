@@ -1,0 +1,74 @@
+.enrollment-page {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+
+  .modal-content {
+    background-color: #15172b;
+    border-radius: 4px;
+    padding: 20px;
+    width: 410px;
+    max-width: 400px;
+    position: relative;
+    text-transform: none;
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 4px;
+    right: 12px;
+    font-size: 26px;
+    color: #ccc;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // label {
+  //   margin-top: 10px;
+  //   font-weight: bold;
+  // }
+
+  // input {
+  //   margin-top: 5px;
+  //   padding: 8px;
+  //   border: 1px solid #ccc;
+  //   border-radius: 4px;
+  // }
+
+  button[type='submit'] {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px 16px;
+  }
+}
+
+.success {
+  color: #4caf50;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
