@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react'
 import Header from './components/view/Header/Header'
-
+import PropTypes from 'prop-types';
 export default function Error({ error, reset }) {
   const [settings, setSettings] = useState([])
+  // TODO: Add an error UI data
   useEffect(() => {
     setSettings({
       logo: 'https://mov.space/wp-content/uploads/2021/08/MOV.space.svg',
@@ -27,4 +28,9 @@ export default function Error({ error, reset }) {
       </button>
     </div>
   )
+}
+
+Error.propTypes = {
+  error: PropTypes.object,
+  reset: PropTypes.func
 }

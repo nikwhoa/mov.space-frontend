@@ -22,7 +22,7 @@ export default function Header({ settings }) {
             <li className={'nav-item'}>
               <Link
                 href={'#'}
-                className={'font-normal 2xl:text-2xl md:text-base hover:text-nav-hover'}
+                className={'font-normal 2xl:text-base md:text-base hover:text-nav-hover'}
                 title={'Твій Кроссфіт'}
               >
                 {settings.text}
@@ -31,7 +31,7 @@ export default function Header({ settings }) {
             <li className={'nav-item'}>
               <Link
                 href={'#'}
-                className={'font-normal 2xl:text-2xl md:text-base hover:text-nav-hover'}
+                className={'font-normal 2xl:text-base md:text-base hover:text-nav-hover'}
                 title={'Тренування'}
               >
                 Тренування
@@ -40,7 +40,7 @@ export default function Header({ settings }) {
             <li className={'nav-item'}>
               <Link
                 href={'#'}
-                className={'font-normal 2xl:text-2xl md:text-base hover:text-nav-hover'}
+                className={'font-normal 2xl:text-base md:text-base hover:text-nav-hover'}
                 title={'Команда'}
               >
                 Команда
@@ -49,7 +49,7 @@ export default function Header({ settings }) {
             <li className={'nav-item'}>
               <Link
                 href={'#'}
-                className={'font-normal 2xl:text-2xl md:text-base hover:text-nav-hover'}
+                className={'font-normal 2xl:text-base md:text-base hover:text-nav-hover'}
                 title={'Розклад'}
               >
                 Розклад
@@ -58,7 +58,7 @@ export default function Header({ settings }) {
           </ul>
         </nav>
         <div className={'header-contacts h-full w-40 2xl:w-64 flex flex-row gap-4 items-center'}>
-          <div className={'text-white font-bold text-xs 2xl:text-xl text-left flex flex-col'}>
+          <div className={'text-white font-bold text-xs 2xl:text-base text-left flex flex-col'}>
             Пн, Вт, Чт 19:20 Сб 11:00
             <a
               href={'tel:+390952850892'}

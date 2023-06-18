@@ -1,11 +1,11 @@
-import Header from '@/app/components/view/Header/Header'
+import { MainScreen } from '@/app/components/view/MainScreen/MainScreen'
 
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_GET_SETTINGS}`)
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+  // noinspection JSCheckFunctionSignatures
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_GET_SETTINGS}`,
+    // { next: { revalidate: 60 } }
+  )
 
-  // Recommendation: handle errors
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
@@ -17,15 +17,9 @@ export default async function Home() {
   const settings = await getData()
   return (
     <>
-      <Header settings={settings[0].appearance} />
-      <h1
-        style={
-          {
-            // color: data.map((item) => item.appearance.colors.accentColor)
-          }
-        }>
-        Home
-      </h1>
+      <MainScreen settings={settings[0]} />
+      {/* <Header settings={settings[0].appearance} /> */}
+      {/* <div className="main-screen h-screen w-full" /> */}
     </>
   )
 }

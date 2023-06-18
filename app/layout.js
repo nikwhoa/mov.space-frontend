@@ -16,8 +16,9 @@ export default async function RootLayout({ children }) {
           href='https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap'
           rel='stylesheet'
         />
+        <title>{metadata.title}</title>
       </head>
-      <body className={'bg-black'}>{children}</body>
+      <body className={'bg-black overflow-x-hidden'}>{children}</body>
     </html>
   )
 }

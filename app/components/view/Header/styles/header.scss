@@ -25,6 +25,10 @@
       @apply font-semibold scale-110;
     }
   }
+
+  @media (min-width: 1440px) {
+    width: 150px;
+  }
 }
 
 .header-buttons {
