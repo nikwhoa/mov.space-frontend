@@ -3,7 +3,7 @@ import { MainScreen } from '@/app/components/view/MainScreen/MainScreen'
 async function getData() {
   // noinspection JSCheckFunctionSignatures
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_GET_SETTINGS}`,
-    // { next: { revalidate: 60 } }
+    { next: { revalidate: 300 } }
   )
 
   if (!res.ok) {

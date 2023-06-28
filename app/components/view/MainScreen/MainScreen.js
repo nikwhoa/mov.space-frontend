@@ -1,4 +1,4 @@
-import './styles/main-screen.scss'
+import './styles/main-screen.css'
 import { PropTypes } from 'prop-types'
 import Header from '@/app/components/view/Header/Header'
 
@@ -12,9 +12,9 @@ export function MainScreen({ settings }) {
   const generateBackground = (type, link) => {
     if (type === 'image') {
       return (
-        <div className={'background-image'}>
-          <img src={link} alt={'background'} />
-        </div>
+        <>
+          <img className={'background-image'} src={link} alt={'background'} />
+        </>
       )
     } else if (type === 'video') {
       return (
@@ -25,11 +25,10 @@ export function MainScreen({ settings }) {
     }
   }
 
-  generateBackground(settings.mainScreen.type, settings.mainScreen.link)
-
   return (
     <>
-      <div className='main-screen overflow-hidden h-screen w-full'>
+      <div className='main-screen overflow-hidden relative h-screen w-full'>
+        {generateBackground(settings.mainScreen.appearance.background.type, settings.mainScreen.appearance.background.urlToMedia)}
         <Header settings={settings.appearance} />
       </div>
     </>

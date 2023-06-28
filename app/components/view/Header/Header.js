@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+'use client'
+import { useState } from 'react'
 import './styles/header.scss'
 import { PropTypes } from 'prop-types'
 import Image from 'next/image'
@@ -8,17 +11,25 @@ import ukraineFlag from '@/app/components/view/Header/images/ukraine-language.sv
 import Link from 'next/link'
 
 export default function Header({ settings }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   // console.log(settings);
   return (
-    <header className={'header-wrapper w-full flex justify-end h-36'}>
-      <div className={'header xl:w-11/12 flex 2xl:gap-20 xl:gap-16 md:gap-9'}>
-        <div className={'logo h-full flex items-center'}>
+    <header
+      className={'header-wrapper lg:bg-transparent w-full flex justify-center h-screen lg:h-36 lg:justify-end'}>
+      <div className='absolute lg:hidden hamburger'>
+        <input type='checkbox' onChange={() => setIsMenuOpen(!isMenuOpen)} />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div className={`header ${isMenuOpen ? 'open' : ''} bg-black bg-opacity-80 flex flex-col gap-0 w-full lg:flex-row lg:gap-9 lg:w-11/12 xl:gap-16 2xl:gap-20`}>
+        <div className={'logo h-full hidden lg:flex items-center'}>
           <Link href={'/'} title={'logotype'}>
             <Image width={123} height={60} src={settings.logo} alt={'MOV.space logo'} className={''} />
           </Link>
         </div>
-        <nav className={'header-navigation h-full flex items-center'}>
-          <ul className={'flex flex-col lg:flex-row'}>
+        <nav className={'header-navigation h-full flex items-center my-4 lg:my-0'}>
+          <ul className={'flex flex-col w-full lg:w-auto lg:flex-row'}>
             <li className={'nav-item'}>
               <Link
                 href={'#'}
@@ -57,7 +68,8 @@ export default function Header({ settings }) {
             </li>
           </ul>
         </nav>
-        <div className={'header-contacts h-full w-40 2xl:w-64 flex flex-row gap-4 items-center'}>
+        <div
+          className={'header-contacts h-auto lg:h-full w-full justify-center lg:justify-normal lg:w-40 2xl:w-64 flex flex-row gap-4 items-center'}>
           <div className={'text-white font-bold text-xs 2xl:text-base text-left flex flex-col'}>
             Пн, Вт, Чт 19:20 Сб 11:00
             <a
@@ -68,34 +80,32 @@ export default function Header({ settings }) {
             </a>
           </div>
           <div className={'flex h-full justify-center items-center'}>
-            <a href={'#'} className={'social-icons w-5 2xl:w-10 transition-all hover:scale-125'}>
+            <a href='#' className={'social-icons w-5 2xl:w-10 transition-all hover:scale-125'}>
               <Image src={instagram} alt={'instagram'} className={'w-full'} />
             </a>
           </div>
           <div className={'flex h-full justify-center items-center'}>
-            <a href={'#'} className={'social-icons w-5 2xl:w-10 transition-all hover:scale-125'}>
+            <a href='#' className={'social-icons w-5 2xl:w-10 transition-all hover:scale-125'}>
               <Image src={youtube} alt={'youtube'} className={'w-full'} />
             </a>
           </div>
         </div>
-        <div className='header-buttons flex h-full flex-row gap-4 justify-between items-center'>
-          <a
-            className={
-              'pl-5 pr-5 pt-2 pb-2 bg-nav-hover hover:bg-white cursor-pointer rounded-lg font-bold text-base text-black'
-            }
-          >
+        <div
+          className='header-buttons flex h-auto my-5 lg:my-0 lg:h-full flex-row justify-center gap-4 lg:gap-4 lg:justify-between items-center'>
+          <a href='#'
+             title='Вхід'
+             className='pl-5 pr-5 pt-2 pb-2 bg-nav-hover hover:bg-white cursor-pointer rounded-lg font-bold text-base text-black'>
             Вхід
           </a>
           <a
-            className={
-              'pl-5 pr-5 pt-2 pb-2 bg-nav-hover hover:bg-white cursor-pointer rounded-lg font-bold text-base text-black'
-            }
-          >
+            href='#'
+            title='Записатись'
+            className='pl-5 pr-5 pt-2 pb-2 bg-nav-hover hover:bg-white cursor-pointer rounded-lg font-bold text-base text-black'>
             Записатись
           </a>
         </div>
-        <div className='header-language-selector h-full flex items-center'>
-          <div className='language-selector-wrapper w-16 h-10 bg-white rounded-t-lg rounded-r-none rounded-b-lg'>
+        <div className='header-language-selector h-full flex justify-center lg:justify-normal items-center'>
+          <div className='language-selector-wrapper w-16 h-10 bg-white rounded-t-lg  rounded-b-lg'>
             <div className='language-selector flex flex-row gap-2 items-center'>
               <div className='language-selector-item flex flex-row gap-2 items-center'>
                 <div className='language-selector-item-flag'>
