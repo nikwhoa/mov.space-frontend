@@ -14,14 +14,14 @@ export default function Header({ settings }) {
   // console.log(settings);
   return (
     <header
-      className={'header-wrapper lg:bg-transparent w-full flex justify-center h-screen lg:h-36 lg:justify-end'}>
+      className={'header-wrapper  w-full flex justify-center h-screen lg:h-36 lg:justify-end'}>
       <div className='absolute lg:hidden hamburger'>
         <input type='checkbox' onChange={() => setIsMenuOpen(!isMenuOpen)} />
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div className={`header ${isMenuOpen ? 'open' : ''} bg-black bg-opacity-80 flex flex-col gap-0 w-full lg:flex-row lg:gap-9 lg:w-11/12 xl:gap-16 2xl:gap-20`}>
+      <div className={`header ${isMenuOpen ? 'open' : ''} bg-black bg-opacity-80 lg:bg-transparent flex flex-col gap-0 w-full lg:flex-row lg:gap-9 lg:w-11/12 xl:gap-16 2xl:gap-20`}>
         <div className={'logo h-full hidden lg:flex items-center'}>
           <Link href={'/'} title={'logotype'}>
             <Image width={123} height={60} src={settings.logo} alt={'MOV.space logo'} className={''} />
