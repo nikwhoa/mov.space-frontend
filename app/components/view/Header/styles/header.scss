@@ -6,10 +6,12 @@
   @media (max-width: 1024px) {
     position: absolute;
     height: 100vh;
-    overflow: scroll;
     transform-origin: 0 0;
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    overflow-y: scroll;
   }
   @media (min-width: 1024px) {
     width: 98%;
@@ -115,5 +117,11 @@
 
   input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(-10px, 10px);
+  }
+}
+
+.header-language-selector {
+  @media (max-width: 1024px) and (orientation: landscape) {
+    margin: 2rem 0;
   }
 }
