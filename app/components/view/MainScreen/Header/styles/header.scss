@@ -1,5 +1,17 @@
+.header-wrapper {
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  @media (max-width: 1024px) {
+    height: 0;
+  }
+}
+
+.header-open {
+  height: 100vh !important;
+}
+
 .open {
   transform: translate(0, 0) !important;
+  //height: 100vh !important;
 }
 
 .header {
@@ -8,7 +20,7 @@
     height: 100vh;
     transform-origin: 0 0;
     transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
   }
   @media (max-width: 1024px) and (orientation: landscape) {
     overflow-y: scroll;

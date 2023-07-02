@@ -4,9 +4,9 @@ import { useState } from 'react'
 import './styles/header.scss'
 import { PropTypes } from 'prop-types'
 import Image from 'next/image'
-import instagram from '@/app/components/view/Header/images/instagram-header.svg'
-import youtube from '@/app/components/view/Header/images/youtube-header.svg'
-import ukraineFlag from '@/app/components/view/Header/images/ukraine-language.svg'
+import instagram from '@/app/components/view/MainScreen/Header/images/instagram-header.svg'
+import youtube from '@/app/components/view/MainScreen/Header/images/youtube-header.svg'
+import ukraineFlag from '@/app/components/view/MainScreen/Header/images/ukraine-language.svg'
 import Link from 'next/link'
 
 export default function Header({ settings }) {
@@ -14,7 +14,7 @@ export default function Header({ settings }) {
   // console.log(settings);
   return (
     <header
-      className={'header-wrapper  w-full flex justify-center h-screen lg:h-36 lg:justify-end'}>
+      className={`header-wrapper z-10 relative ${isMenuOpen ? 'header-open' : ''} w-full flex justify-center h-screen lg:h-36 lg:justify-end`}>
       <div className='absolute lg:hidden hamburger'>
         <input type='checkbox' onChange={() => setIsMenuOpen(!isMenuOpen)} />
         <span></span>

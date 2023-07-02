@@ -1,7 +1,7 @@
 'use client' // Error components must be Client Components
 
 import { useEffect, useState } from 'react'
-import Header from './components/view/Header/Header'
+import Header from '@/app/components/view/MainScreen/Header/Header'
 import PropTypes from 'prop-types';
 export default function Error({ error, reset }) {
   const [settings, setSettings] = useState([])

@@ -1,4 +1,5 @@
 import { MainScreen } from '@/app/components/view/MainScreen/MainScreen'
+import OurTrains from '@/app/components/view/OurTrains/OurTrains'
 
 async function getData() {
   // noinspection JSCheckFunctionSignatures
@@ -18,8 +19,7 @@ export default async function Home() {
   return (
     <>
       <MainScreen settings={settings[0]} />
-      {/* <Header settings={settings[0].appearance} /> */}
-      {/* <div className="main-screen h-screen w-full" /> */}
+      <OurTrains />
     </>
   )
 }

@@ -5,3 +5,20 @@
   box-sizing: border-box;
 }
 
+h3 {
+  @apply text-4xl font-extrabold;
+}
+
+.our-trains-slide {
+  @apply h-[170px] md:h-[300px] bg-fixed bg-cover bg-center rounded-[10px] flex items-start justify-center flex-col text-xl font-extrabold px-5 cursor-pointer hover:bg-orange-color transition-colors duration-700 ease-linear;
+  &:hover {
+    background-image: none !important;
+  }
+}
+
+.our-trains-link {
+  &:hover {
+
+  }
+}
+
