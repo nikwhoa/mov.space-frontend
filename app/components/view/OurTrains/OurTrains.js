@@ -2,7 +2,6 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { register } from 'swiper/element/bundle'
-import Image from 'next/image'
 import slide1 from './images/slide1.jpg'
 import slide2 from './images/slide2.jpg'
 import slide3 from './images/slide3.jpg'
