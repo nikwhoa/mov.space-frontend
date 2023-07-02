@@ -102,7 +102,7 @@ export default function OurTrains() {
   return (
     <section className='bg-black px-4'>
       <div className='container mx-auto'>
-        <div className='pt-20 pb-8'>
+        <div className='pt-14 pb-8'>
           <h3 className='text-orange-color'>Наші тренування</h3>
         </div>
         <div className='relative overflow-visible text-white'>

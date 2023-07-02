@@ -16,9 +16,6 @@ h3 {
   }
 }
 
-.our-trains-link {
-  &:hover {
-
-  }
+.we-in-numbers-divider {
+    @apply hidden md:block w-[1px] h-[60px] bg-black mx-5 relative right-5 float-right -top-[5.5rem];
 }
-

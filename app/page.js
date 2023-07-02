@@ -1,5 +1,7 @@
 import { MainScreen } from '@/app/components/view/MainScreen/MainScreen'
 import OurTrains from '@/app/components/view/OurTrains/OurTrains'
+import WeInNumbers from '@/app/components/view/WeInNumbers/WeInNumbers'
+import OurTeam from '@/app/components/view/OurTeam/OurTeam'
 
 async function getData() {
   // noinspection JSCheckFunctionSignatures
@@ -20,6 +22,8 @@ export default async function Home() {
     <>
       <MainScreen settings={settings[0]} />
       <OurTrains />
+      <WeInNumbers />
+      <OurTeam />
     </>
   )
 }
