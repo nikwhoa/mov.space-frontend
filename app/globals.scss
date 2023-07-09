@@ -17,5 +17,29 @@ h3 {
 }
 
 .we-in-numbers-divider {
-    @apply hidden md:block w-[1px] h-[60px] bg-black mx-5 relative right-5 float-right -top-[5.5rem];
+  @apply hidden md:block w-[1px] h-[60px] bg-black mx-5 relative right-5 float-right -top-[5.5rem];
+}
+
+.logo-second-page {
+  @apply h-20 w-full;
+}
+
+.train-item {
+  @apply rounded-[10px] bg-blue-500 relative h-52 md:h-80 max-h-[400px] flex justify-start items-center flex-col;
+  &:hover {
+    div {
+      display: block;
+      z-index: 3;
+    }
+
+    .bg-overlay {
+      z-index: 2;
+      background: rgba(255, 129, 13, 0.52);
+      @apply absolute h-full w-full top-0 rounded-[10px];
+    }
+  }
+
+  .title {
+    @apply absolute bottom-5 w-full px-4 text-white text-2xl font-extrabold;
+  }
 }
