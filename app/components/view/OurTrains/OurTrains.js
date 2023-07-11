@@ -5,6 +5,7 @@ import { register } from 'swiper/element/bundle'
 import slide1 from './images/slide1.jpg'
 import slide2 from './images/slide2.jpg'
 import slide3 from './images/slide3.jpg'
+import Link from 'next/link'
 
 export default function OurTrains() {
   const [slides, setSlides] = useState([])
@@ -78,6 +79,7 @@ export default function OurTrains() {
   }, [])
 
   useEffect(() => {
+    // TODO: api request for trains
     setSlides([{
       src: slide1.src,
       title: 'Body build'
@@ -112,26 +114,32 @@ export default function OurTrains() {
                 if (index < 3) {
                   return (
                     <swiper-slide key={index}>
-                      <a href='#' className='our-trains-link'>
+                      <Link href={{
+                        pathname: `/trains/${slide.title}`,
+                        query: { title: slide.title, slug: slide.title }
+                      }} className='our-trains-link'>
                         <div style={{
                           backgroundImage: `url(${slide.src})`
                         }} className='our-trains-slide'>
                           {slide.title}
                         </div>
-                      </a>
+                      </Link>
                     </swiper-slide>
                   )
                 }
               } else {
                 return (
                   <swiper-slide key={index}>
-                    <a href='#' className='our-trains-link'>
+                    <Link href={{
+                      pathname: `/trains/${slide.title}`,
+                      query: { title: slide.title, slug: slide.title }
+                    }} className='our-trains-link'>
                       <div style={{
                         backgroundImage: `url(${slide.src})`
                       }} className='our-trains-slide'>
                         {slide.title}
                       </div>
-                    </a>
+                    </Link>
                   </swiper-slide>
                 )
               }

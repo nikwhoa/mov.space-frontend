@@ -55,7 +55,7 @@ export default function Header({ settings }) {
               <li className={'nav-item'}>
                 <Link
                   onClick={() => !isMenuOpen ? null : setIsMenuOpen(!isMenuOpen)}
-                  href={'#'}
+                  href='/team'
                   className={'font-normal 2xl:text-base md:text-base hover:text-nav-hover'}
                   title={'Команда'}
                 >
