@@ -11,7 +11,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 export default function Header({ settings }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pathname = usePathname()
   return (
     <>
       {/* {pathname === '/trains' ? <div className='logo-second-page'>LLLL</div> : null} */}

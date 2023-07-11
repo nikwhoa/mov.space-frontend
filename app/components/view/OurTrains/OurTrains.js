@@ -109,6 +109,7 @@ export default function OurTrains() {
         </div>
         <div className='relative overflow-visible text-white'>
           <swiper-container init={false} loop={true}>
+            {/* eslint-disable-next-line array-callback-return */}
             {slides.map((slide, index) => {
               if (isMobile) {
                 if (index < 3) {
