@@ -1,0 +1,461 @@
+.tab-pane {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.react-tabs__tab:focus:after {
+  content: none !important;
+}
+
+.react-tabs__tab-list {
+  border: none !important;
+  text-align: center;
+}
+
+.filter-schedule-link {
+  cursor: pointer;
+  text-underline-offset: 3px;
+  font-size: 1.2rem !important;
+  text-decoration: underline #ffffff;
+
+  &:hover {
+    color: #48d494 !important;
+  }
+
+  &__active {
+    color: #48d494 !important;
+  }
+}
+
+.month-schedule {
+  .train {
+    font-size: 1rem !important;
+  }
+  .month-title {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+
+    &__date {
+      display: flex;
+      align-items: center;
+
+      // current
+      &--current {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: #ffffff;
+
+        @media screen and (max-width: 768px) {
+          font-size: 1.1rem;
+        }
+      }
+
+      div {
+        @media screen and (max-width: 768px) {
+          margin-right: 0.2rem;
+          margin-left: 0.2rem;
+        }
+
+        margin-right: 1rem;
+        margin-left: 1rem;
+      }
+    }
+
+    &__arrow {
+      cursor: pointer;
+      line-height: 120px;
+      font-size: 1.5rem;
+      color: #ffffff;
+      width: 60px;
+      height: 60px;
+      position: relative;
+      z-index: 1;
+
+      svg {
+        position: relative;
+        z-index: 2;
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: #48d494 !important;
+          }
+        }
+      }
+    }
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+
+    &__item {
+      background-color: rgba(67, 67, 67, 0.5);
+      border: 1px solid rgba(67, 67, 67, 0.5);
+      // padding-left: 1rem;
+      .weekday {
+        font-size: 1rem;
+        font-weight: 300;
+        color: #ffffff;
+        text-align: center;
+        // padding-left: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #ffffff;
+      }
+    }
+  }
+}
+
+.schedule {
+  &__title {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    color: #dad9d9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__arrow {
+    cursor: pointer;
+    line-height: 120px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    z-index: 1;
+    align-self: flex-start;
+
+    svg {
+      text-decoration: none;
+      position: absolute;
+      z-index: 2;
+      margin: -25px 0 0 -15px;
+      top: 50%;
+      left: 50%;
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: #48d494 !important;
+        }
+      }
+    }
+  }
+
+  .day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80px;
+    width: 100%;
+    // border-bottom: 1px solid #ffffff;
+    // after border
+    &:after {
+      content: '';
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(146, 146, 146, 0.4);
+      top: 1.2rem;
+    }
+
+    margin: 0 0 0.4rem 0;
+
+    div {
+      @media screen and (max-width: 968px) {
+        display: none;
+      }
+
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+  }
+
+  &__day__item {
+    // display: block;
+    // align text vertically
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    // padding: 1.57rem 0;
+    width: 100%;
+    // margin: 1rem 0;
+
+    // before and after border
+    // odd
+    &:nth-child(odd) {
+      background-color: rgba(255, 255, 255, 0.059);
+    }
+
+    // even
+    //&:nth-child(even) {
+    //  background-color: rgba(255, 255, 255, 0.139);
+    //}
+
+    div {
+      @media screen and (max-width: 968px) {
+        display: none;
+      }
+
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .current-date {
+    text-transform: capitalize;
+    font-weight: 900;
+    color: #ffffff;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  &__date {
+    // background-image: linear-gradient(rgb(90, 90, 90) 33%, rgba(255, 255, 255, 0) 0%);
+    // background-position: right;
+    // background-size: 1px 2px;
+    // background-repeat: repeat-y;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    flex-direction: column;
+    border-top: 1px solid rgba(132, 132, 132, 0.4);
+    border-bottom: 1px solid rgba(132, 132, 132, 0.4);
+    // justify-content: space-between;
+    // height: 300px;
+    width: 142px;
+    line-height: 180%;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    // before and after border
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(132, 132, 132, 0.4);
+      left: 0;
+      top: 0;
+    }
+
+    // odd days
+    //&:nth-child(odd) {
+    //  background-color: rgb(43, 43, 43, 0.9);
+    //}
+
+    // even days
+    //&:nth-child(even) {
+    //  background-color: rgb(31, 31, 31, 0.9);
+    //}
+  }
+
+  .train {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    text-transform: none;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+
+    &__time {
+      font-weight: bold;
+    }
+  }
+  .no-trains {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 1.4rem;
+  }
+  &__times {
+    top: 325px;
+    position: absolute;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+
+    &__time {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #ffffff;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.day-schedule {
+  &__title {
+    height: 40px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__date {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+.train-1 {
+  background-color: #305c4d !important;
+}
+
+.train-2 {
+  background-color: #4c5b5c !important;
+  justify-content: center !important;
+
+  div {
+    position: relative;
+    top: 25px;
+  }
+
+  //height: 100px;
+  //position: relative;
+}
+
+.train-2 + .schedule__day__item {
+  background-color: #4c5b5c !important;
+}
+.last-day {
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(132, 132, 132, 0.4);
+    right: 0;
+    top: 0;
+  }
+}
+
+.schedule-item-link {
+  // display: block;
+  text-align: center;
+  // padding-top: .6rem;
+  // height: 100%;
+  // width: 100%;
+  color: inherit;
+  font-weight: 400 !important;
+
+  &:hover {
+    font-weight: 900 !important;
+  }
+}
+
+.schedule-tooltip {
+  position: absolute !important;
+  background-color: #e6f4ea;
+  border: 1px solid #e6f4ea;
+  border-radius: 14px;
+  padding: 8px 0;
+  font-size: .9rem;
+  z-index: 100;
+  font-weight: 400;
+  color: #030404;
+  text-transform: none;
+  width: 350px !important;
+  top: initial !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  // bottom: 190px;
+  left: 120px;
+}
+
+.schedule-tooltip__content {
+  position: static !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    cursor: default;
+  }
+}
+
+.enroll-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px 16px;
+
+  &:hover {
+    background-color: #3e8e41;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

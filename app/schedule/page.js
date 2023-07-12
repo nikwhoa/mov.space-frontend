@@ -1,67 +1,44 @@
 'use client'
-import { useEffect, useState } from 'react'
-import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
-import ScheduleButton from '@/app/schedule/ShowScheduleButton'
 
-const queryClient = new QueryClient()
+// import ScheduleButton from '@/app/schedule/ShowScheduleButton'
 
-// eslint-disable-next-line react/prop-types
-function Schedule({ view }) {
+import Schedule from '@/app/schedule/Schedule'
+import { useQuery } from '@tanstack/react-query'
+import { useEffect } from 'react'
+import useSWR from 'swr'
+
+const fetcher = (url) => fetch(url).then((res) => res.json())
+
+export default function Home(props) {
   const {
-    isLoading,
+    data,
     error,
-    data
-  } = useQuery({
-    queryKey: ['schedule-data'],
-    queryFn: () =>
-      fetch('http://localhost:3001/api/schedule', { method: 'GET' }).then(
-        (res) => {
-          return res.json()
-        }
-      )
-  })
-  if (isLoading) return 'Loading...'
-
-  if (error) return 'An error has occurred: ' + error.message
-
-  console.log(view)
-
-  return (
-    <div className='text-white'>
-      {data.map((item) => <div><h1>{item.scheduleItem}</h1></div>)}
-    </div>
+    isLoading
+  } = useSWR(
+    'http://localhost:3001/api/schedule',
+    fetcher
   )
-}
 
-export default async function Home() {
-  const [view, setView] = useState('week')
-  const [windowWidth, setWindowWidth] = useState(false)
-
-  useEffect(() => {
-    if (window.innerWidth < 1024) {
-      setWindowWidth(true)
-      setView('day')
-    } else {
-      setWindowWidth(false)
-    }
-
-    const handleWindowResize = () => {
-      const prevView = view
-      if (window.innerWidth < 1024) {
-        setWindowWidth(true)
-        setView('day')
-      } else {
-        setView(prevView)
-        setWindowWidth(false)
-      }
-    }
-
-    window.addEventListener('resize', handleWindowResize)
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize)
-    }
-  }, [])
+  if (error) return 'An error has occurred.'
+  if (isLoading) return 'Loading...'
+  // const {
+  //   data,
+  //   isLoading,
+  //   error
+  // } = useQuery('schedule-data', () =>
+  //   fetch('http://localhost:3001/api/schedule', { method: 'GET' }).then(
+  //     (res) => {
+  //       return res.json()
+  //     }
+  //   ))
+  //
+  // if (isLoading) return 'Loading...'
+  //
+  // if (error) return 'An error has occurred: ' + error.message
+  // console.log(data)
+  console.log(data)
+  let i = 0;
+  console.log(i++)
   return (
     <>
       <div className='container mx-auto px-4 py-2'>
@@ -70,15 +47,7 @@ export default async function Home() {
             Розклад тренувань
           </h2>
         </div>
-        <div className='w-full text-white' hidden={windowWidth}>
-          Переглянути розклад на:&nbsp;
-          <ScheduleButton view={view} setView={setView} value='day' />{' '}
-          <ScheduleButton view={view} setView={setView} value='week' />{' '}
-          <ScheduleButton view={view} setView={setView} value='month' />
-        </div>
-        <QueryClientProvider client={queryClient}>
-          <Schedule view={view} />
-        </QueryClientProvider>
+        <Schedule schedule={data} isLoading={isLoading} />
       </div>
 
     </>
