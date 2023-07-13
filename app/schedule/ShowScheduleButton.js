@@ -25,10 +25,10 @@ export default function ScheduleButton({
         setValueTranslate(value)
     }
   }, [value])
-  console.log(value)
+
   return (
     <Link href={`/schedule?${value}`} onClick={() => setView(value)} className={`cursor-pointer filter-schedule-link ${
-      view === value ? 'font-bold underline underline-offset-2' : ''
+      view === value ? 'font-bold underline underline-offset-2 text-orange-color' : ''
     }`}>
       {valueTranslate}
     </Link>

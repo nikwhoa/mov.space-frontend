@@ -19,26 +19,9 @@ export default function Home(props) {
     fetcher
   )
 
-  if (error) return 'An error has occurred.'
-  if (isLoading) return 'Loading...'
-  // const {
-  //   data,
-  //   isLoading,
-  //   error
-  // } = useQuery('schedule-data', () =>
-  //   fetch('http://localhost:3001/api/schedule', { method: 'GET' }).then(
-  //     (res) => {
-  //       return res.json()
-  //     }
-  //   ))
-  //
-  // if (isLoading) return 'Loading...'
-  //
-  // if (error) return 'An error has occurred: ' + error.message
-  // console.log(data)
-  console.log(data)
-  let i = 0;
-  console.log(i++)
+  if (error) return <div className='text-white'>An error has occurred.</div>
+  if (isLoading) return <div className='text-white'>Loading...</div>
+
   return (
     <>
       <div className='container mx-auto px-4 py-2'>
@@ -47,7 +30,9 @@ export default function Home(props) {
             Розклад тренувань
           </h2>
         </div>
-        <Schedule schedule={data} isLoading={isLoading} />
+        <div className='my-8'>
+          <Schedule schedule={data} isLoading={isLoading} />
+        </div>
       </div>
 
     </>

@@ -17,16 +17,16 @@
 
 .filter-schedule-link {
   cursor: pointer;
-  text-underline-offset: 3px;
+  //text-underline-offset: 3px;
   font-size: 1.2rem !important;
-  text-decoration: underline #ffffff;
+  //text-decoration: underline #ffffff;
 
   &:hover {
-    color: #48d494 !important;
+    color: #FF810D !important;
   }
 
   &__active {
-    color: #48d494 !important;
+    color: #FF810D !important;
   }
 }
 

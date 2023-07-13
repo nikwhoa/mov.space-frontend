@@ -31,7 +31,7 @@ export default function RenderWeekSchedule({ schedule }) {
     }
   };
   return (
-    <div className='week-schedule schedule mb-14'>
+    <div className='week-schedule schedule'>
       <div className='schedule__title'>
         <div
           className='schedule__arrow arrow-left'

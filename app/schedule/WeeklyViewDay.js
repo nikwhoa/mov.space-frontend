@@ -32,7 +32,7 @@ export default function WeeklyViewDay({
     }
     return null
   }
-  console.log(data)
+
   const timeSlots = []
   for (let i = 8; i <= 22; i++) {
     timeSlots.push(`${new Date(day).toLocaleString('en-US').slice(0, 10)} ${i <= 9 ? 0 : ''}${i}:00:00`)
