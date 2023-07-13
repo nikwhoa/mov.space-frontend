@@ -198,15 +198,11 @@
   }
 
   &__day__item {
-    // display: block;
-    // align text vertically
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
-    // padding: 1.57rem 0;
     width: 100%;
-    // margin: 1rem 0;
 
     // before and after border
     // odd
@@ -215,9 +211,9 @@
     }
 
     // even
-    //&:nth-child(even) {
-    //  background-color: rgba(255, 255, 255, 0.139);
-    //}
+    &:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.139);
+    }
 
     div {
       @media screen and (max-width: 968px) {
@@ -269,6 +265,16 @@
       height: 100%;
       background-color: rgba(132, 132, 132, 0.4);
       left: 0;
+      top: 0;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(132, 132, 132, 0.4);
+      right: 0;
       top: 0;
     }
 
