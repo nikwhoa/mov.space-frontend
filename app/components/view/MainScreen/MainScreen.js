@@ -7,7 +7,7 @@ MainScreen.propTypes = {
 }
 
 export function MainScreen({ settings }) {
-  console.log(settings.mainScreen)
+  // console.log(settings.mainScreen)
 
   const generateBackground = (type, link) => {
     if (type === 'image') {
@@ -40,7 +40,7 @@ export function MainScreen({ settings }) {
             Build your body
           </div>
           <div className='mt-12'>
-            <a href='#' type='button'
+            <a href='/?show=true' type='button'
                className='py-1.5 px-6 rounded-[10px] text-black text-base font-medium bg-nav-hover hover:bg-white hover:scale-110 transition duration-200 ease-in-out'>
               Записатись
             </a>
