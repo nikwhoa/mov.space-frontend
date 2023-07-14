@@ -1,6 +1,7 @@
 import './styles/main-screen.css'
 import { PropTypes } from 'prop-types'
 import Header from '@/app/components/view/MainScreen/Header/Header'
+import Link from 'next/link'
 
 MainScreen.propTypes = {
   settings: PropTypes.object
@@ -40,10 +41,10 @@ export function MainScreen({ settings }) {
             Build your body
           </div>
           <div className='mt-12'>
-            <a href='/?show=true' type='button'
+            <Link href='/?show=true' type='button'
                className='py-1.5 px-6 rounded-[10px] text-black text-base font-medium bg-nav-hover hover:bg-white hover:scale-110 transition duration-200 ease-in-out'>
               Записатись
-            </a>
+            </Link>
           </div>
           <div className='mt-14 down-arrow'>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
