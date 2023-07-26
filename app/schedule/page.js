@@ -15,7 +15,7 @@ export default function Home(props) {
     error,
     isLoading
   } = useSWR(
-    'http://localhost:3001/api/schedule',
+    'http://localhost:3002/api/schedule',
     fetcher
   )
 
