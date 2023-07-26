@@ -1,4 +1,7 @@
 .idea
+.idea/
+.idea/*
+.vscode
 ### NextJS ###
 # dependencies
 /node_modules
