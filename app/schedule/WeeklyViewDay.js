@@ -20,7 +20,7 @@ export default function WeeklyViewDay({
     error,
     isLoading
   } = useSWR(
-    'http://localhost:3001/api/classes',
+    `${process.env.NEXT_PUBLIC_API_URL_GET_CLASSES}`,
     fetcher
   )
 
