@@ -15,7 +15,7 @@ export default function Home(props) {
     error,
     isLoading
   } = useSWR(
-    'http://localhost:3002/api/schedule',
+    `${process.env.NEXT_PUBLIC_API_URL_GET_SCHEDULE}`,
     fetcher
   )
 
